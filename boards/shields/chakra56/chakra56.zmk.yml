@@ -1,0 +1,14 @@
+file_format: "1"
+id: chakra56
+name: Chakra56
+type: shield
+url: https://github.com/0chak/Chakra56
+requires: [pro_micro]
+exposes: [i2c_oled]
+features:
+  - keys
+  - display
+  - encoder
+siblings:
+  - chakra56_left
+  - chakra56_right
