@@ -14,6 +14,10 @@
 #define RAISE 2
 #define ADJUST 3
 
+&soft_off {
+    hold-time-ms = <2000>; // Only turn off it the key is held for 2 seconds or longer.
+};
+
 / {
 
    // Activate ADJUST layer by pressing raise and lower
@@ -41,7 +45,7 @@
 &kp TAB   &kp Q  &kp W    &kp F    &kp P     &kp G                            &kp J  &kp L     &kp U     &kp Y    &kp SEMI &kp EQUAL
 &kp BSPC  &kp A  &kp R    &kp S    &kp T     &kp D                            &kp H  &kp N     &kp E     &kp I    &kp O    &kp SQT
 &kp LSHFT &kp Z  &kp X    &kp C    &kp V     &kp B      &kp RET    &kp BSPC   &kp K  &kp M     &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
-                          &mo RAISE &kp LALT &kp LGUI  &kp SPACE   &kp RET    &mo RAISE        &kp RCTRL &kp K_PLAY_PAUSE
+                          &soft_off &kp LALT &kp LGUI  &kp SPACE   &kp RET    &mo RAISE        &kp RCTRL &kp K_PLAY_PAUSE
             >;
 
             sensor-bindings = <&inc_dec_kp C_NEXT C_PREV &inc_dec_kp C_VOL_DN C_VOL_UP>;
